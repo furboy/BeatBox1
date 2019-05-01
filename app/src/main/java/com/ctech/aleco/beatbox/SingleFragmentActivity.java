@@ -12,7 +12,7 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.fragment_beat_box);
 
         FragmentManager fm = getSupportFragmentManager();
         Fragment myFragment = fm.findFragmentById(R.id.fragment_container);
