@@ -20,11 +20,11 @@ public class Sound {
         String filename = components[components.length - 1];
         mName = filename.replace(".wav", "");
     }
-    public String getmAssetPath(){
+    public String getAssetPath(){
         return mAssetPath;
     }
 
-    public String getmName(){
+    public String getName(){
         return mName;
     }
 
