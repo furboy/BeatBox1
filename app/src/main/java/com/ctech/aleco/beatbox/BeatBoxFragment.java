@@ -16,11 +16,9 @@ import com.ctech.aleco.beatbox.databinding.ListItemSoundBinding;
 
 import java.util.List;
 
-import static android.media.CamcorderProfile.get;
 
 public class BeatBoxFragment extends Fragment {
     private BeatBox mBeatBox;
-    private ListItemSoundBinding mBinding;
 
 
     public static BeatBoxFragment newInstance() {
@@ -47,6 +45,8 @@ public class BeatBoxFragment extends Fragment {
     }
 
     private class SoundHolder extends RecyclerView.ViewHolder {
+        private ListItemSoundBinding mBinding;
+
         private SoundHolder(ListItemSoundBinding binding) {
             super(binding.getRoot());
             mBinding = binding;
@@ -59,7 +59,7 @@ public class BeatBoxFragment extends Fragment {
         }
     }
 
-    private class SoundAdapter extends Adapter<SoundHolder> {
+    private class SoundAdapter extends RecyclerView.Adapter<SoundHolder> {
 
         private List<Sound> mSoundList;
 
